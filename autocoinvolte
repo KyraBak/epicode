@@ -1,0 +1,11 @@
+  In sostanza le chiavi esterne vanno messe insieme e alla fine senza dividerle da virgole
+  
+
+CREATE TABLE autocoinvolte(
+	Targa CHAR(20) NOT NULL,
+	codSin char(100) NOT NULL,
+	Importodeldanno NUMERIC,
+	FOREIGN KEY(codSin) REFERENCES Sinistro(codSin)
+	FOREIGN KEY(Targa) REFERENCES auto10(Targa)
+	);
+  
